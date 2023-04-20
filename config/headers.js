@@ -8,10 +8,6 @@ const securityHeaders = [
     value: 'max-age=63072000; includeSubDomains; preload',
   },
   {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN',
-  },
-  {
     key: 'X-Content-Type-Options',
     value: 'nosniff',
   },
@@ -22,6 +18,14 @@ const securityHeaders = [
   {
     key: 'Referrer-Policy',
     value: 'no-referrer',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'ALLOW-FROM https://app.contentful.com',
+  },
+  {
+    key: 'Content-Security-Policy',
+    value: 'frame-ancestors https://app.contentful.com;'
   },
 ];
 
